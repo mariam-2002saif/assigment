@@ -45,7 +45,7 @@ Drawer dr()
       backgroundColor: Colors.white70,
       child:  CircleAvatar(
         radius: 33,
-        backgroundImage:  AssetImage('assets/mnm.jpg'),
+        backgroundImage:  AssetImage('assets/mm.jpg'),
       ),
     ),
     ),
@@ -117,7 +117,7 @@ Drawer dr()
 }
 
 Container body(){
-
+  
   return Container(
     padding: EdgeInsets.only(left: 10),
     child: Column(
@@ -161,6 +161,7 @@ Container body(){
           margin: EdgeInsets.only(left: 30,right: 30),
           child: Text(' I worked as an app programmer.\n I worked as an app programmer.\n I worked as an app programmer.',style: TextStyle(fontSize: 15),),
         ),
+        SizedBox(height: 20,),
         SizedBox(height: 20,),
         Container(
           height: 40,
