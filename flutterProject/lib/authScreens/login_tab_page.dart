@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hw1/mainScreen/home_screen.dart';
+
+import '../onboardng/my_onboardng.dart';
 
 class LoginTabPage extends StatefulWidget {
 
@@ -60,11 +63,16 @@ class _FormScreenState extends State<LoginTabPage> {
               borderRadius: BorderRadius.circular(5),
             ),
             child: Center(
-              child: Text('Login',style: TextStyle(
+              child:GestureDetector(
+                child:Text('Login',style: TextStyle(
                 color: Colors.white,
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),),
+              onTap: (){
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder:(_)=>HomeScreen()));
+              },
+                ),
             ),
           ),
         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hw1/authScreens/login_tab_page.dart';
 
 class RegistrationTabPage extends StatefulWidget {
 
@@ -66,11 +67,17 @@ class _FormScreenState extends State<RegistrationTabPage> {
               borderRadius: BorderRadius.circular(5),
             ),
             child: Center(
-              child: Text('Login',style: TextStyle(
+              child:GestureDetector(
+                child: Text('Registration',style: TextStyle(
                 color: Colors.white,
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),),
+                onTap: (){
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder:(_)=>LoginTabPage()));
+                },
+
+              ),
             ),
           ),
         ),

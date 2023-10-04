@@ -1,9 +1,7 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:hw1/authScreens/auth_screen.dart';
 import 'package:hw1/onboardng/my_onboardng.dart';
-//import 'package:hw1/mainScreen/home_screen.dart';
 class MySplachScreen extends StatefulWidget {
   @override
   State<MySplachScreen> createState() => _MySplachScreenState();
