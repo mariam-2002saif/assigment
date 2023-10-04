@@ -14,10 +14,6 @@ class _FormScreenState extends State<RegistrationTabPage> {
   final configPassController=TextEditingController();
   bool passToggle=true;
 
-  // bool emailValid=RegExp(
-  //     r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_'{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+").hasMatch(value);
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -89,7 +85,6 @@ class _FormScreenState extends State<RegistrationTabPage> {
    decoration: InputDecoration(
      labelText: "Name",
      border: OutlineInputBorder(),
-     //prefixIcon: Icon(Icons.email),
 
    ),
  );
@@ -159,29 +154,20 @@ class _FormScreenState extends State<RegistrationTabPage> {
       labelText: "Config Password",
       border: OutlineInputBorder(),
       prefixIcon: Icon(Icons.lock),
-      suffixIcon: InkWell(
-        onTap: (){
-
-          setState(() {
-            passToggle= !passToggle;
-
-          });
-        },
-        child:
-        Icon(
-            passToggle?Icons.visibility:Icons.visibility_off
-        ),
-      ),
 
     ),
     validator: (value){
-      if(value!.isEmpty)
+      if(value==null ||value.isEmpty)
       {
         return "Enter Password";
       }
       else if (passController.text.length<6){
         return "Password Lengh should  be more than 6 characters";
       }
+      else if(value!=passController.text) {
+        return " Password does not much";
+      }
+      return null;
     },
 
   );

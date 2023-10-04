@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hw1/authScreens/auth_screen.dart';
-//import 'package:hw1/home_screen.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

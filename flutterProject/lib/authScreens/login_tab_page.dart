@@ -12,9 +12,6 @@ class _FormScreenState extends State<LoginTabPage> {
   final passController=TextEditingController();
   bool passToggle=true;
 
-  // bool emailValid=RegExp(
-  //     r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_'{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+").hasMatch(value);
-
 
   @override
   Widget build(BuildContext context) {
@@ -75,6 +72,7 @@ class _FormScreenState extends State<LoginTabPage> {
       ],
     ),
   );
+
   Widget emailField()=> TextFormField(
     keyboardType: TextInputType.emailAddress,
     controller:emailController ,
@@ -94,10 +92,7 @@ class _FormScreenState extends State<LoginTabPage> {
       else if(!emailValid){
         return "Enter Valid Email";
       }
-
-
     },
-
   );
   Widget passField()=>TextFormField(
     keyboardType: TextInputType.visiblePassword,
