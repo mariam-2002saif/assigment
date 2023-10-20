@@ -2,12 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:connectivity/connectivity.dart';
 
-void main()
-{
-
-  runApp(MyApp());
+void main() {
+  runApp(const MyApp());
 }
-
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
@@ -42,7 +39,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    // تحقق من الاتصال بالانترنت
+    // // تحقق من الاتصال بالانترنت
     Connectivity().onConnectivityChanged.listen((connectivityResult) {
       setState(() {
         isConnected = connectivityResult == ConnectivityResult.mobile ||
@@ -53,20 +50,12 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    // Get the platform implementation for the webview_flutter plugin.
-    WebViewPlatform.instance;
-    // تحقق من اتصال الإنترنت
-    if (!isConnected) {
-      return Scaffold(
+    return Scaffold(
         appBar: AppBar(title: const Text('Flutter Simple Example')),
-        body: Center(child: Text('لا يوجد اتصال بالإنترنت')),
-      );
-    } else {
-      return Scaffold(
-        appBar: AppBar(title: const Text('Flutter Simple Example')),
-        body: WebViewWidget(controller: controller),
-      );
-    }
+        body: !isConnected
+            ? WebViewWidget(controller: controller)
+            : Center(
+          child: Text('لا يوجد اتصال بالانترنت'),
+        ));
   }
 }
-
