@@ -31,9 +31,9 @@ class Home extends StatelessWidget {
           child: GridView.builder(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
-                  childAspectRatio: 3 / 2,
+                  childAspectRatio: 2 / 2,
                   crossAxisSpacing: 10,
-                  mainAxisSpacing: 33),
+                  mainAxisSpacing: 20),
               itemCount: items.length,
               itemBuilder: (BuildContext context, int index) {
                 return GestureDetector(
@@ -152,8 +152,8 @@ class Home extends StatelessWidget {
               ),
               Container(
                 margin: EdgeInsets.only(bottom: 12),
-                child: Text("Developed by M N M © 2023",
-                    style: TextStyle(fontSize: 16)),
+                child: Text("Developed by Group,leave it to God ©2023",
+                    style: TextStyle(fontSize: 14)),
               )
             ],
           ),
@@ -171,6 +171,10 @@ class Home extends StatelessWidget {
           title: Text("Home"),
         )));
   }
+  //AppBar appBar()=>
+//Drawer drawer()=>
+
+
 }
 
 

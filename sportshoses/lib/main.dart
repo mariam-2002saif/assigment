@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
      create: (context) {return Cart();},
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home:Home(),
+        home:MySplachScreen(),
         // Home(),
       ),
     );

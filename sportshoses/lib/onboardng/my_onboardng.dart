@@ -116,7 +116,12 @@ class IntroScreen extends StatelessWidget {
     Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context)=>AuthScreen()));
+
+
+
   }
+
+
   // AppBar appBar()=>AppBar(
   //   title: const Text("onbording"),
   //   centerTitle: true,
